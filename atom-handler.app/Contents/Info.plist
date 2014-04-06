@@ -11,7 +11,7 @@
 	<key>CFBundleIconFile</key>
 	<string>applet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.ScriptEditor.id.atom-handler</string>
+	<string>com.wizardofogz.atom-handler</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -51,7 +51,7 @@
 		<key>positionOfDivider</key>
 		<real>333</real>
 		<key>savedFrame</key>
-		<string>55 821 602 597 0 0 2560 1418 </string>
+		<string>55 1181 602 597 0 0 2880 1778 </string>
 		<key>selectedTabView</key>
 		<string>result</string>
 	</dict>
