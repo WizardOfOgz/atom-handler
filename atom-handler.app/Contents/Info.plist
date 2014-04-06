@@ -29,7 +29,7 @@
 			<string>SysPref Handler</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>atom</string>
+				<string>atm</string>
 			</array>
 		</dict>
 	</array>
