@@ -1,6 +1,6 @@
 # Atom Handler
 
-atom:// URL handler for Atom editor on OSX
+atm:// URL handler for Atom editor on OSX
 
 ## Installation
 
@@ -12,9 +12,9 @@ atom:// URL handler for Atom editor on OSX
 
 Atom Handler will handle URLs which match the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/) and take the following format:
 
-`atom://open?url=file://<file>[&line=<line>[&column=<column>]]`
+`atm://open?url=file://<file>[&line=<line>[&column=<column>]]`
 
-Opening a URL with this format will open the given file in the Atom editor and place the cursor at the beggining of the line number (if given). Note that the column option does not seem to be supported by the Atom command line utility. If a column is given then Atom simply ignores it. The option is supported for compatibility with TextMate and Sublime Text URLs.
+Opening a URL with this format will open the given file in the Atom editor and place the cursor at the beginning of the line number (if given). Note that the column option does not seem to be supported by the Atom command line utility. If a column is given then Atom simply ignores it. The option is supported for compatibility with TextMate and Sublime Text URLs.
 
 ### Examples:
 - `atm://open?url=file:///path/to/other&line=42`
