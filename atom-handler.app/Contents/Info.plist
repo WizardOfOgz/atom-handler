@@ -55,5 +55,7 @@
 		<key>selectedTabView</key>
 		<string>result</string>
 	</dict>
+	<key>LSUIElement</key>
+	<true/>
 </dict>
 </plist>
