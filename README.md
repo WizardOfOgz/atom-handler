@@ -28,9 +28,7 @@ Install BetterErrors in your Rails application and add the following code to an 
 
 ```ruby
 if defined? BetterErrors
-  BetterErrors.editor = proc do |full_path, line|
-    "atm://open?url=file://#{full_path}&line=#{line}"
-  end
+  BetterErrors.editor = "atm://open?url=file://%{file}&line=%{line}"
 end
 ```
 
