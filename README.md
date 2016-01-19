@@ -32,6 +32,14 @@ if defined? BetterErrors
 end
 ```
 
+## Integrating with PHP Xdebug
+
+Install [Xdebug](http://xdebug.org) for PHP, add the following to your php.ini, and restart your webserver.
+
+```
+xdebug.file_link_format="atm://open?url=file://%f&line=%l"
+```
+
 ## License
 
 Atom Handler is released under the [BSD 3-Clause license](https://github.com/WizardOfOgz/atom-handler/blob/master/LICENSE).
