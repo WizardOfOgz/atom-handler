@@ -1,6 +1,6 @@
 # Atom Handler
 
-atm:// URL handler for Atom editor on OSX
+A handler to open atm:// URLs in Atom editor on OSX.
 
 ## Installation
 
