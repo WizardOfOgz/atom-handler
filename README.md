@@ -5,22 +5,38 @@ A handler to open atm:// URLs in Atom editor on OSX.
 ## Installation
 
 - Download the latest release [(atom-handler.app.zip)](https://github.com/WizardOfOgz/atom-handler/releases/download/1.1.1/atom-handler.app.zip) and unzip it.
-- Move atom-handler.app into your */Applications* directory.
+- Move atom-handler.app into your `/Applications` directory.
 - Open the application which will register the handler and exit immediately.
 
 ## Usage
 
 Atom Handler will handle URLs which match the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/) and take the following format:
 
-`atm://open?url=file://<file>[&line=<line>[&column=<column>]]`
+`atm://open?url=file://<file_path>[&line=<line>[&column=<column>]]`
 
 Opening a URL with this format will open the given file in the Atom editor and place the cursor at the beginning of the line number (if given). Note that the column option does not seem to be supported by the Atom command line utility. If a column is given then Atom simply ignores it. The option is supported for compatibility with TextMate and Sublime Text URLs.
 
 ### Examples:
+- `atm://open?url=file:///path/to/other`
 - `atm://open?url=file:///path/to/other&line=42`
 - `atm://open?url=file:///path/to/file&line=42&column=7`
+- `atm://open?url=file://%2Fpath%2Fto%2Fother  # URL-encoded slashes (/)`
 
 These URLs may be opened from a browser or from the command line using the system `open` command.
+
+## URL Encoding
+
+Note that The file path may contain the following URL-encoded values.
+
+|name|character|URL encoding|
+|---|---|---|
+|slash|`/`|`%2F`|
+|space|` `|`%20` OR `+`|
+|plus|`+`|`%2B`|
+
+Plus-signs are legal characters in file names and _must_ be escaped as `%2B` since an unescaped `+` will be transformed into a space character. We highly discourage using plus-signs in file names since support for it varies across systems.
+
+Spaces in file names must likewise be escaped. These are also discouraged since many scripts and applications do not handle them properly.
 
 ## Integrating with BetterErrors
 

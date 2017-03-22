@@ -19,14 +19,14 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.1</string>
+	<string>1.1.2</string>
 	<key>CFBundleSignature</key>
 	<string>aplt</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>SysPref Handler</string>
+			<string>Atom Handler</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>atm</string>
