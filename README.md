@@ -1,6 +1,6 @@
 # Atom Handler
 
-A handler to open atm:// URLs in Atom editor on OSX.
+A handler to open atm:// URLs in Atom editor on OSX. Inspired by [subl](https://github.com/dhoulb/subl).
 
 Atom Handler registers itself to handler links with the `atm://` protocol, similar to the protocol TextMate handles (txmt://) or the which can be used for Sublime Text (subl:// or sublime://). The protocol can then be used to open files in your Atom editor. Read on to learn how to use Atom Handler.
 
