@@ -4,7 +4,7 @@ A handler to open atm:// URLs in Atom editor on OSX.
 
 ## Installation
 
-- Download the latest release [(atom-handler.app.zip)](https://github.com/WizardOfOgz/atom-handler/releases/download/1.1.1/atom-handler.app.zip) and unzip it.
+- Download the latest release [(atom-handler.app.zip)](https://github.com/WizardOfOgz/atom-handler/releases/download/1.1.2/atom-handler.app.zip) and unzip it.
 - Move atom-handler.app into your `/Applications` directory.
 - Open the application which will register the handler and exit immediately.
 
