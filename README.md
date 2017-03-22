@@ -2,6 +2,10 @@
 
 A handler to open atm:// URLs in Atom editor on OSX.
 
+Atom Handler registers itself to handler links with the `atm://` protocol, similar to the protocol TextMate handles (txmt://) or the which can be used for Sublime Text (subl:// or sublime://). The protocol can then be used to open files in your Atom editor. Read on to learn how to use Atom Handler.
+
+Note: We would have liked to have used `atom://` as a protocol, but that is already taken and used for other purposes by Atom itself.
+
 ## Prerequisites
 
 - Install Atom Shell Commands. Within Atom select from the menu: `Atom > Install Shell Commands`
@@ -48,7 +52,7 @@ Currently this application relies on the `atom` CLI utility being accessible at 
 
 ## Integrating with BetterErrors
 
-Install BetterErrors in your Rails application and add the following code to an initializer (or any other location where it will be executed when your application is loaded.)
+Install [Better Errors](https://github.com/charliesome/better_errors) in your Rails application and add the following code to an initializer (or any other location where it will be executed when your application is loaded.)
 
 ```ruby
 if defined? BetterErrors
