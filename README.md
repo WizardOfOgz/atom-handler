@@ -2,6 +2,10 @@
 
 A handler to open atm:// URLs in Atom editor on OSX.
 
+## Prerequisites
+
+- Install Atom Shell Commands. Within Atom select from the menu: `Atom > Install Shell Commands`
+
 ## Installation
 
 - Download the latest release [(atom-handler.app.zip)](https://github.com/WizardOfOgz/atom-handler/releases/download/1.1.2/atom-handler.app.zip) and unzip it.
@@ -37,6 +41,10 @@ Note that The file path may contain the following URL-encoded values.
 Plus-signs are legal characters in file names and _must_ be escaped as `%2B` since an unescaped `+` will be transformed into a space character. We highly discourage using plus-signs in file names since support for it varies across systems.
 
 Spaces in file names must likewise be escaped. These are also discouraged since many scripts and applications do not handle them properly.
+
+## Known Limitations
+
+Currently this application relies on the `atom` CLI utility being accessible at `/usr/local/bin/atom` in order to open the files. If there is a better way of finding the CLI utility, please let me know or open a pull request.
 
 ## Integrating with BetterErrors
 
