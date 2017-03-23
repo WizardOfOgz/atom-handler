@@ -16,6 +16,8 @@ Note: We would have liked to have used `atom://` as a protocol, but that is alre
 - Move atom-handler.app into your `/Applications` directory.
 - Open the application which will register the handler and exit immediately.
 
+Opening the application in the last step may be prevented by OS security. If that happens go to `System Preferences > Security & Privacy`. You should see a message about "atom-txmt-url-handler" being blocked. Click the button which says "Open Anyway".
+
 ## Usage
 
 Atom Handler will handle URLs which match the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/) and take the following format:
