@@ -18,6 +18,17 @@ Note: We would have liked to have used `atom://` as a protocol, but that is alre
 
 Opening the application in the last step may be prevented by OS security. If that happens go to `System Preferences > Security & Privacy`. You should see a message about "atom-txmt-url-handler" being blocked. Click the button which says "Open Anyway".
 
+Note: Nothing appears on the screen when you open the application. Also, opening the application does not have any effect after the first time, opening it multiple times will do no harm.
+
+### Testing the Installation
+
+You can quickly test the installation from the command line. These commands should create a file and open it in Atom:
+
+```
+echo "Hello, world" >> /tmp/test.txt
+open "atm://open?url=file:///tmp/test.txt"
+```
+
 ## Usage
 
 Atom Handler will handle URLs which match the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/) and take the following format:
@@ -32,7 +43,7 @@ Opening a URL with this format will open the given file in the Atom editor and p
 - `atm://open?url=file:///path/to/file&line=42&column=7`
 - `atm://open?url=file://%2Fpath%2Fto%2Fother  # URL-encoded slashes (/)`
 
-These URLs may be opened from a browser or from the command line using the system `open` command.
+These URLs may be opened from a browser or from the command line using the system `open` command. See the [Integrations](#Integrations) section below for use with popular platforms and frameworks.
 
 ## URL Encoding
 
@@ -52,7 +63,9 @@ Spaces in file names must likewise be escaped. These are also discouraged since 
 
 Currently this application relies on the `atom` CLI utility being accessible at `/usr/local/bin/atom` in order to open the files. If there is a better way of finding the CLI utility, please let me know or open a pull request.
 
-## Integrating with BetterErrors
+## Integrations
+
+### BetterErrors (Ruby on Rails)
 
 Install [Better Errors](https://github.com/charliesome/better_errors) in your Rails application and add the following code to an initializer (or any other location where it will be executed when your application is loaded.)
 
@@ -62,7 +75,7 @@ if defined? BetterErrors
 end
 ```
 
-## Integrating with PHP Xdebug
+### PHP Xdebug
 
 Install [Xdebug](http://xdebug.org) for PHP, add the following to your php.ini, and restart your webserver.
 
