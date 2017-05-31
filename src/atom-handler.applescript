@@ -8,8 +8,9 @@ on open location atomURL
 	-- 's/^[^&]*/'\"'\"'&'\"'\"'/' -- Surround the file name in strong (single) quotes, e.g. %2Fpath%2Fto%2Ffile&line=3 => '%2Fpath%2Fto%2Ffile'&line=3
 	-- s/\\\\%2F/\\\\//g           -- Unencode escaped slashes (/), e.g. '%2Fpath%2Fto%2Ffile' => '/path/to/file'
 	-- sed -E 's/%20|\\+/\\ /g'    -- Unencode escaped spaces, e.g. 'user/Google%20Drive/my+project/file' => 'user/Google Drive/my project/file'
-	-- sed s/%2B/+/g                -- Unencode escaped plus-signs, e.g. 'project/one%2Btwo/file' => 'project/one+two/file'
+	-- s/%40/@/g                   -- Unencode escaped @, e.g. 'user/Google%20Drive/my+project@2.3.4/file' => 'user/Google Drive/my project@2.3.4/file'
+	-- sed s/%2B/+/g               -- Unencode escaped plus-signs, e.g. 'project/one%2Btwo/file' => 'project/one+two/file'
 	-- s/\\&line=/:/ | sed s/\\&column=/:/  -- Change the format of the line and column parameters, e.g. '/path/to/file'&line=3&column=4 => '/path/to/file':3:4
-	set file_path to do shell script "echo '" & file_path & "' | sed 's/^[^&]*/'\"'\"'&'\"'\"'/' | sed s/\\\\%2F/\\\\//g | sed -E 's/%20|\\+/\\ /g' | sed s/%2B/+/g | sed s/\\&line=/:/ | sed s/\\&column=/:/"
+	set file_path to do shell script "echo '" & file_path & "' | sed 's/^[^&]*/'\"'\"'&'\"'\"'/' | sed s/\\\\%2F/\\\\//g | sed -E 's/%20|\\+/\\ /g' | sed 's/%40/@/g' | sed s/%2B/+/g | sed s/\\&line=/:/ | sed s/\\&column=/:/"
 	do shell script "/usr/local/bin/atom " & file_path
 end open location
