@@ -54,6 +54,7 @@ Note that The file path may contain the following URL-encoded values.
 |slash|`/`|`%2F`|
 |space|` `|`%20` OR `+`|
 |plus|`+`|`%2B`|
+|at|`@`|`%40`|
 
 Plus-signs are legal characters in file names and _must_ be escaped as `%2B` since an unescaped `+` will be transformed into a space character. We highly discourage using plus-signs in file names since support for it varies across systems.
 
