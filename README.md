@@ -1,3 +1,7 @@
+# _Update 12/2017_
+
+After many years of waiting Atom finally supports URI handling. If your Atom is up-to-date then you no longer need this package!
+
 # Atom Handler
 
 A handler to open atm:// URLs in Atom editor on OSX. Inspired by [subl](https://github.com/dhoulb/subl).
